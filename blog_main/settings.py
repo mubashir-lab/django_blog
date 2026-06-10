@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogs',
-    'assignments'
+    'assignments',
+    'crispy_forms',
+    'crispy_bootstrap4'
     
     
 ]
@@ -129,3 +131,6 @@ STATICFILES_DIRS =[
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR /'media'
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
