@@ -1,9 +1,9 @@
 {% extends "base.html" %}
   {% block content %}
 
-<h3 class="text-uppercase text-warning" style="letter-spacing: 2px;">Category - {{category}}</h3>
+<h3 class="text-uppercase text-warning" style="letter-spacing: 2px;">Search Term - {{keyword}}</h3>
   <div class="row mb-2">
-    {% for post in posts %}
+    {% for post in blogs %}
     <div class="col-md-6">
       <div class="card border-0" >
         <div class="card-body">
@@ -16,9 +16,6 @@
     {% endfor %}
   </div>
 
-    </div><!-- /.row -->
+    
 
-  </main><!-- /.container -->
-
-</div>
 {% endblock %}
