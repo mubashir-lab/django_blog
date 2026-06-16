@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    {% load crispy_forms_tags %}
+    <!-- left sidebar -->
+     {% comment %} load sidebar {% endcomment %}
+     {% include "dashboard/sidebar.html" %}
+     {% if perms.auth.change_user %}
+     <div class="col-md-9">
+        <h2 >Edit User</h2>
+        <form action="" method="POST" style="width:500px;" >
+            {% csrf_token %}
+            {{form | crispy}}
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
+     </div>
+     {% else %}
+     You have no permission to edit user
+     {% endif %}
+
+
+    <!-- right side content -->
+</div>
+
+{% endblock content %}
